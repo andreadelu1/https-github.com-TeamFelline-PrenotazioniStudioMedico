@@ -142,6 +142,48 @@ public class DBManager {
 		return ris;
 	}
 	
+	public ArrayList<Medico> getDoctors() throws Exception{
+		
+		ArrayList<Medico> elenco = new ArrayList<Medico>();
+		
+		String sql="SELECT * FROM medico order by 1;";
+		rs=query.executeQuery(sql);
+		Medico m;
+		
+		while(rs.next())
+		{
+			m=new Medico(rs.getString(1),rs.getString(2),rs.getString(3),
+                    rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),
+                    rs.getString(8),rs.getString(9)); 
+			elenco.add(m);
+		}
+		
+		System.out.println("MEDICI CARICATI: " + elenco.size());
+		
+		return elenco;
+	}
+	
+	public ArrayList<Specializzazione> getSpecializzazione() throws Exception{
+		
+		ArrayList<Specializzazione> elenco = new ArrayList<Specializzazione>();
+		
+		String sql="SELECT * FROM specializzazione order by 1;";
+		rs=query.executeQuery(sql);
+		Specializzazione s;
+		
+		while(rs.next())
+		{
+			s=new Specializzazione(rs.getString(1),rs.getString(2),rs.getString(3)); 
+			elenco.add(s);
+		}
+		
+		System.out.println("SPECIALIZZAZIONI CARICATE: " + elenco.size());
+		
+		return elenco;
+	}
+	
+	
+	
 	
 	public void close() throws Exception {
 		query.close();

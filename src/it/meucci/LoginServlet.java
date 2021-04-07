@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
 				p=db.caricaPaziente(email, password);
 				request.getSession().setAttribute("SESSION_PAZIENTE", p);
 			
-				response.sendRedirect("home.jsp");
+				response.sendRedirect("index1.jsp");
 			}
 			else if(db.login2(email, password)) {
 				m=db.caricaMedico(email, password);

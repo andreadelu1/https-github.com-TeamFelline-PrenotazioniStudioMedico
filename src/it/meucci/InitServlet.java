@@ -25,25 +25,25 @@ public class InitServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
     
-    /* public void init(ServletConfig config) throws ServletException{
-    	ArrayList citta= new ArrayList();
-		ArrayList province= new ArrayList();
+    public void init(ServletConfig config) throws ServletException{
+    	ArrayList<Medico> medici= new ArrayList<Medico>();
+		ArrayList<Specializzazione> spec= new<Specializzazione> ArrayList();
 		System.out.println("INIZIALIZZAZIONE..........");
 		try {
 			DBManager db=new DBManager();
-			citta=db.getCitta();
-			province=db.getProvince();
+			medici=db.getDoctors();
+			spec=db.getSpecializzazione();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		config.getServletContext().setAttribute("ELENCO_CITTA", citta);
-		config.getServletContext().setAttribute("ELENCO_PROVINCE", province);
+		config.getServletContext().setAttribute("ELENCO_MEDICI", medici);
+		config.getServletContext().setAttribute("ELENCO_SPECIALIZZAZIONE", spec);
 		
     }
-*/
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
