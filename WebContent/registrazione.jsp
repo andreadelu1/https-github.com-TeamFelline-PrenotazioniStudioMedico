@@ -32,8 +32,8 @@
             <label>Codice Fiscale</label>
             <input type="text" name="txtCF" required>
           </div>
-         
-          
+
+
           <div class="data">
             <label>Email</label>
             <input type="email" name="txtEmail" required>
@@ -50,7 +50,7 @@
             <label>Provincia</label>
             <input type="text" name="txtProvincia" required>
           </div>
-        
+
           <div class="data">
             <label>Numero di Telefono</label>
             <input type="text" name="txtNTelefono" required>
@@ -76,4 +76,3 @@
 </div>
 </body>
 </html>
-    
